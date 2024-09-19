@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="jumbotron text-center">
+        <h3>Enes Seneger Bloğuna Hoş Geldiniz</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique enim, vel nihil, autem, nostrum quo quam totam
+           voluptas vitae obcaecati voluptates! Repudiandae neque suscipit ut voluptates cum tenetur rerum quam.</p>
+    </div>
+    {% if request.user.is_authenticated %}
+        Giriş Yapılmıştır.{{request.user.username}}
+    {% else %}
+       Giriş Yapılmamıştır!
+    {% endif %}
+{% endblock body %}
